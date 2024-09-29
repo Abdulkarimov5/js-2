@@ -8,9 +8,9 @@ let firstElement = styles.shift()
 alert(firstElement)
 
 styles.unshift("Reggae")
-styles.unshift("Rap") */
+styles.unshift("Rap")
 
-/* function sumInput() {
+function sumInput() {
     let arr = []
     let num
     let result = 0
@@ -27,6 +27,7 @@ styles.unshift("Rap") */
 }
 
 alert(sumInput()) */
+// Это не относится к домашке
 
 /* const auto = {
     brand: "BMW",
@@ -44,11 +45,17 @@ alert(sumInput()) */
     },
 
     calculateDriveTime(distance) {
-        return distance / this.avgSpeed
+        const travelTime = distance / this.avgSpeed;
+        const breaks = Math.floor(travelTime / 4);
+        const totalTime = travelTime + breaks;
+        return totalTime;
     }
 }
 
-alert(auto) */
+const distance = +prompt("Введите расстояние в километрах:");
+const time = auto.calculateDriveTime(distance);
+alert(`Время в пути: ${time} часов`);
+ */
 
 let list = [
     {name: "Картошка", count: 3, bought: false, price: 50},
@@ -62,6 +69,7 @@ function dispalyList () {
     })
 }
 
+
 function addToList(name, price) {
     for (item of list) {
         if (item.name === name) {
@@ -73,6 +81,8 @@ function addToList(name, price) {
     return list
 }
 
+alert(addToList)
+
 function buyProduct(name) {
     for (item of list) {
         if(item.name === name) {
@@ -81,3 +91,4 @@ function buyProduct(name) {
     }
     return list
 }
+
